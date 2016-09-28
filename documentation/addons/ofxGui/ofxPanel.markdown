@@ -196,7 +196,16 @@ _inlined_description: _
 
 
 _description: _
+parameters is an ofParameterGroup object.
 
+Filename is the name of the xml file that will be used to read and write the panel settings. The default is "settings.xml" and this will be written to the root of your data folder. This file gets written when you click on the save icon in the top-right corner of the panel.
+
+x and y positions define where on-screen the panel will be drawn. Default is 10 pixels down and to the right of the top-right corner of your app.
+
+If you wish to load the parameters that are already saved on that file, you should call loadFromFile(const string &filename). i.e.
+
+gui.setup(parameters, "app-settings.xml", 0, 0);
+gui.loadFromFile("app-settings.xml");
 
 
 
